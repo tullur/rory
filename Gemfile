@@ -18,6 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 
 # HAML
 gem 'haml', '~> 5.0', '>= 5.0.4'
+# don't like to replace all erb files
+gem 'haml-rails', '~> 1.0'
 # Bulma 
 gem 'bulma-rails', '~> 0.7.2'
 
