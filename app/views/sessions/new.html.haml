@@ -1,0 +1,8 @@
+%div#login
+    %div.login-card
+        %div.card-title
+            %h1 Please Sign In
+        %div.content
+            = form_for :session, url: login_path do |f|
+                = f.email_field :email, autofocuse: true, placeholder: "Enter email"
+                = f.password_field :password, autocomplete: "off", placeholder: "Enter password"
