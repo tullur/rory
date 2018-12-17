@@ -1,1 +1,16 @@
-%h1 Hello, World!
+%div.hero-body
+    %div.container.has-text-centered
+        %div.columns.is-vcentered
+            %div.column.is-5
+                %figure.image.is-4by3
+                    = image_tag "hero-main.jpeg", class: "hero--image"
+            %div.column.is-6.is-offset-1
+                %h1.title.is-2
+                    Lorem ipsum dolor sit amet.
+                %h2.subtitle.is-4
+                    Lorem ipsum dolor sit amet.
+                %br
+                %p.has-text-centered
+                    %a.button.is-medium.is-info.is-outlined
+                        Learn More
+                

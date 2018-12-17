@@ -22,7 +22,8 @@ gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'haml-rails', '~> 1.0'
 # Bulma 
 gem 'bulma-rails', '~> 0.7.2'
-
+# FA
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -55,6 +56,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'pg', '~> 1.1', '>= 1.1.3'
 end
 
 group :test do

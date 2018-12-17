@@ -1,1 +1,28 @@
-%a.button Button
+%nav.level
+    %div.container
+        %div.navbar-brand
+            %a.navbar-item
+                = image_tag "ruby.png"
+            %div.navbar-burger.burger
+                %span
+                %span   
+                %span
+            %div#topNav.navbar-menu
+                %div.navbar-start
+                    = link_to 'Home',  root_path, class: 'navbar-item'
+                    = link_to 'Pages', about_path, class: 'navbar-item'
+                    = link_to 'About', about_path, class: 'navbar-item'
+                    = link_to 'Pages', about_path, class: 'navbar-item'
+                %div.navbar-end.level-right
+                    %div.navbar-item
+                        %div.field.is-grouped
+                            %p.control
+                                %a.button.is-middle
+                                    %span.icon
+                                        %i.fa.fa-user-plus
+                                    %span Register
+                            %p.control
+                                %a.button.is-middle.is-info.is-outlined
+                                    %span.icon
+                                        %i.fa.fa-user
+                                    %span Login
