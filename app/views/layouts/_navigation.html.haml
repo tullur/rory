@@ -10,7 +10,7 @@
             %div#topNav.navbar-menu
                 %div.navbar-start
                     = link_to 'Home',  root_path, class: 'navbar-item'
-                    = link_to 'Pages', about_path, class: 'navbar-item'
+                    = link_to 'Gallery', about_path, class: 'navbar-item'
                     = link_to 'About', about_path, class: 'navbar-item'
                     = link_to 'Pages', about_path, class: 'navbar-item'
                 %div.navbar-end.level-right
@@ -20,12 +20,12 @@
                                 %p.control
                                     = link_to root_path, :class => 'button is-middle' do
                                         %span.icon
-                                            %i.fa.fa-user.plus
+                                            %i.fa.fa-user.alt
                                         %span Account
                                 %p.control
                                     = link_to logout_path, method: :delete, :class => 'button is-middle is-info is-outlined' do
                                         %span.icon
-                                            %i.fa.fa-user
+                                            %i.fa.fa-sign-out
                                         %span Logout
                         - else
                             %div.field.is-grouped
@@ -33,7 +33,7 @@
                                     = link_to about_path, :class => 'button is-middle' do                                 
                                         %span.icon
                                             %i.fa.fa-user-plus
-                                        %span Register
+                                        %span Sign Up
                                 %p.control
                                     = link_to login_path, :class => 'button is-middle is-info is-outlined' do
                                         %span.icon
