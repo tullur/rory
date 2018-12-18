@@ -17,12 +17,12 @@
                     %div.navbar-item
                         %div.field.is-grouped
                             %p.control
-                                %a.button.is-middle
+                                %a.button.is-middle                                   
                                     %span.icon
                                         %i.fa.fa-user-plus
                                     %span Register
                             %p.control
-                                %a.button.is-middle.is-info.is-outlined
+                                = link_to login_path, :class => 'button is-middle is-info is-outlined' do
                                     %span.icon
                                         %i.fa.fa-user
                                     %span Login
