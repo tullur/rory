@@ -15,26 +15,27 @@
                     = link_to 'Pages', about_path, class: 'navbar-item'
                 %div.navbar-end.level-right
                     %div.navbar-item
-                        %div.field.is-grouped
                         - if logged_in?
-                            %p.control
-                                = link_to root_path, :class => 'button is-middle' do
-                                    %span.icon
-                                        %i.fa.fa-user.plus
-                                    %span Account
-                            %p.control
-                                = link_to logout_path, method: :delete, :class => 'button is-middle is-info is-outlined' do
-                                    %span.icon
-                                        %i.fa.fa-user
-                                    %span Logout
+                            %div.field.is-grouped
+                                %p.control
+                                    = link_to root_path, :class => 'button is-middle' do
+                                        %span.icon
+                                            %i.fa.fa-user.plus
+                                        %span Account
+                                %p.control
+                                    = link_to logout_path, method: :delete, :class => 'button is-middle is-info is-outlined' do
+                                        %span.icon
+                                            %i.fa.fa-user
+                                        %span Logout
                         - else
-                            %p.control
-                                = link_to about_path, :class => 'button is-middle' do                                 
-                                    %span.icon
-                                        %i.fa.fa-user-plus
-                                    %span Register
-                            %p.control
-                                = link_to login_path, :class => 'button is-middle is-info is-outlined' do
-                                    %span.icon
-                                        %i.fa.fa-user
-                                    %span Login
+                            %div.field.is-grouped
+                                %p.control
+                                    = link_to about_path, :class => 'button is-middle' do                                 
+                                        %span.icon
+                                            %i.fa.fa-user-plus
+                                        %span Register
+                                %p.control
+                                    = link_to login_path, :class => 'button is-middle is-info is-outlined' do
+                                        %span.icon
+                                            %i.fa.fa-user
+                                        %span Login
