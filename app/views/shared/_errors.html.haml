@@ -1,0 +1,8 @@
+- if obj.errors.any?
+    %div.notification.is-danger
+        %div.panel-title
+            = pluralize(obj.errors.count, 'error')
+        %div.panel-body
+            %ul
+                - obj.errors.full_messages.each do |msg|
+                    %li = msg

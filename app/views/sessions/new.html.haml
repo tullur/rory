@@ -1,3 +1,8 @@
+- if flash[:notice]
+    %div.notification.is-danger
+        %div.delete
+        = flash[:notice]
+
 %section.hero.is-fullheight
     %div.hero-body
         %div.container.has-text-centered
