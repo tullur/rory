@@ -1,4 +1,4 @@
-- if flash[:notice]
+- flash.each do |name, msg|
     %div.column
-        %div.notification.is-danger#fade-out-target
-            = flash[:notice]
+        %div.notification.is-name
+            = content_tag(:div, msg, :id => "flash_#{name}") if msg.is_a?(String)

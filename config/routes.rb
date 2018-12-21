@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'about', to: 'welcome#about'
   
+  get 'signup', to: 'user#new'
+  resources :users, except: [:new]
+
   resources :articles
 
   get 'login', to: 'sessions#new'
