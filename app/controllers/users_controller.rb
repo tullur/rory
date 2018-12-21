@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
     before_action :set_user, only: [:edit, :update, :show]
+    before_action :require_same_user, only: [:edit, :update, :destroy]
+
     def index; end
 
     def new
@@ -9,7 +11,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            session[:user_id] = @user_id
+            session[:user_id] = @user.id
             redirect_to user_path(@user), success: "Welcome #{@user.username}"
         else
             render 'new'
@@ -44,6 +46,4 @@ class UsersController < ApplicationController
     end
 
     def require_same_user; end
-
-    def require_admin; end
 end

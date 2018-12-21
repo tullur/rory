@@ -17,5 +17,5 @@
 //= require_tree .
 
 $(document).on("turbolinks:load", function() {
-    $("#fade-out-target").fadeOut(5000);
+    $("#fade-out").fadeOut(5000);
 });
