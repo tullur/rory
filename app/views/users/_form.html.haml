@@ -1,0 +1,27 @@
+= render 'shared/errors', obj: @user
+%section.hero.is-fullheight
+    %div.hero-body
+        %div.container.has-text-centered
+            %div.column.is-4.is-offset-4
+                %h3.title.has-text-grey Sign Up
+                %div.box
+                    %figure.avatar
+                        = image_tag "user.png", class: "rounded"
+                    = form_for @user do |f|
+                        %div.field
+                            %div.control
+                                = f.label :username
+                                = f.text_field :username, class: "input is-middle", placeholder: "Enter username", required: true, autofocus: true
+                        %div.field
+                            %div.control
+                                = f.label :email
+                                = f.email_field :email, class: "input is-middle", placeholder: "Enter email", required: true, autofocus: false
+                        %div.field
+                            %div.control
+                                = f.label :password
+                                = f.password_field :password, class: "input is-middle", placeholder: "Enter password", required: true, autofocus: false
+                        %div.field
+                            %div.control
+                                = f.label :confirm_password
+                                = f.password_field :password, class: "input is-middle", placeholder: "Confirm password", required: true, autofocus: false
+                        = f.button("Sign Up", class: "button is-block is-info is-middle is-fullwidth")

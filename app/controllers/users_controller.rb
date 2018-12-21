@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
     before_action :set_user, only: [:edit, :update, :show]
     def index; end
 
@@ -40,7 +40,7 @@ class UserController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permite(:username, :email, :password)
+        params.require(:user).permit(:username, :email, :password)
     end
 
     def require_same_user; end

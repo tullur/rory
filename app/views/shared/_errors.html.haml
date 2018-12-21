@@ -5,4 +5,5 @@
         %div.panel-body
             %ul
                 - obj.errors.full_messages.each do |msg|
-                    %li = msg
+                    %li 
+                        = msg
