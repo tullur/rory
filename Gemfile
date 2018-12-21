@@ -24,6 +24,8 @@ gem 'haml-rails', '~> 1.0'
 gem 'bulma-rails', '~> 0.7.2'
 # FA
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+# jQuery
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

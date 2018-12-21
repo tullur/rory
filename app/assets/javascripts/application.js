@@ -11,6 +11,11 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(document).on("turbolinks:load", function() {
+    $("#fade-out-target").fadeOut(5000);
+});
