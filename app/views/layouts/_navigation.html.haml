@@ -18,7 +18,7 @@
                         - if logged_in?
                             %div.field.is-grouped
                                 %p.control
-                                    = link_to root_path, :class => 'button is-middle' do
+                                    = link_to user_path(current_user), :class => 'button is-middle' do
                                         %span.icon
                                             %i.fa.fa-user.alt
                                         %span Account

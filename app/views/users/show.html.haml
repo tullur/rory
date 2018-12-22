@@ -1,6 +1,6 @@
-%h1.has-text-center Welcome
-= @user.username
-
-%h4.has-text-center
-    %figure.image.is-128x128
-        = user_gravatar(@user)
+%section.hero.is-info.welcome.is-small
+    %div.hero-body
+        %div.container
+            %h1.title= "Hello, " +  @user.username
+            %figure.image.is-64x64
+                = user_gravatar(@user)
