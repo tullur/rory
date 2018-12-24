@@ -11,8 +11,8 @@
                 %div.navbar-start
                     = link_to 'Home',  root_path, class: 'navbar-item'
                     = link_to 'Gallery', about_path, class: 'navbar-item'
+                    = link_to 'Articles', articles_path, class: 'navbar-item'
                     = link_to 'About', about_path, class: 'navbar-item'
-                    = link_to 'Pages', about_path, class: 'navbar-item'
                 %div.navbar-end.level-right
                     %div.navbar-item
                         - if logged_in?
