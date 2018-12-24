@@ -1,0 +1,21 @@
+- obj.each do |article|
+    %div.container
+        %section.articles
+            %div.column.is-8.is-offset-2
+                %div.card.article
+                    %div.card-content
+                        %div.media
+                            %div.media-center
+                                = image_tag 'user-photo.jpeg', alt: 'User', class: 'author-image'
+                            %div.media-content.has-text-centered
+                                %p.title.article-title
+                                    = link_to article.header, article_path(article)
+                                %p.subtitle.is-6.article-subtitle
+                                    = article.user.username if article.user
+                                    = time_ago_in_words(article.created_at)
+                                    = time_ago_in_words(article.updated_at)
+                        %div.content.article-body
+                            %h3.has-text-centered
+                                = article.title
+                            %p
+                                = article.description
