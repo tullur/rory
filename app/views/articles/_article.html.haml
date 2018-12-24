@@ -5,8 +5,8 @@
                 %div.card.article
                     %div.card-content
                         %div.media
-                            %div.media-center
-                                = image_tag 'user-photo.jpeg', alt: 'User', class: 'author-image'
+                            %div.media-center.author-image
+                                = user_gravatar(article.user)
                             %div.media-content.has-text-centered
                                 %p.title.article-title
                                     = link_to article.header, article_path(article)
