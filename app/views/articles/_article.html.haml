@@ -11,9 +11,9 @@
                                 %p.title.article-title
                                     = link_to article.header, article_path(article)
                                 %p.subtitle.is-6.article-subtitle
-                                    = article.user.username if article.user
-                                    = time_ago_in_words(article.created_at)
-                                    = time_ago_in_words(article.updated_at)
+                                    = "Created by: " + article.user.username if article.user
+                                    = "Created at: " + time_ago_in_words(article.created_at) + " ago"
+                                    = "Updated at: " + time_ago_in_words(article.updated_at) + " ago"
                         %div.content.article-body
                             %h3.has-text-centered
                                 = article.title
