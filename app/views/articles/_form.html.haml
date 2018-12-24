@@ -1,0 +1,21 @@
+= render 'shared/errors', obj: @article
+%section.hero.is-fullheight
+    %div.hero-body
+        %div.container.has-text-centered
+            %div.column.is-4.is-offset-4
+                %h3.title.has-text-grey Form
+                %div.box
+                    = form_for @article do |f|
+                        %div.field
+                            %div.control
+                                = f.label :header
+                                = f.text_field :header, class: "input is-middle", placeholder: "Header", autofocus: true
+                        %div.field
+                            %div.control
+                                = f.label :title
+                                = f.text_field :title, class: "input is-middle", placeholder: "Title", autofocus: false
+                        %div.field
+                            %div.control
+                                = f.label :description
+                                = f.text_field :description, class: "input is-middle", placeholder: "Description", autofocus: false
+                        = f.submit("Submit", class: "button is-block is-info is-middle is-fullwidth")

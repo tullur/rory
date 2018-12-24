@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
     end
 
     def create
-        @article = Articel.new(article_params)
+        @article = Article.new(article_params)
         @article.user = current_user
         if @article.save
             flash[:success] = "Article was successfully created"
@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
     def destroy
         @article.destroy
         flash[:danger] = "Article was successfully deleted"
-        redirect_to article_path
+        redirect_to articles_path
     end
 
     private
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-        params.require(:article).permit(:title, :description)
+        params.require(:article).permit(:header, :title, :description)
     end
 
     def require_same_user
